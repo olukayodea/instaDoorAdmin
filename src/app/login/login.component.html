@@ -1,0 +1,46 @@
+
+<body class="hold-transition login-page">
+    <div class="login-box">
+      <div class="login-logo">
+        <a href="./"><img src="assets/img/logo.png" width="200"></a>
+      </div>
+      <!-- /.login-logo -->
+      <div class="login-box-body">
+        <p class="login-box-msg">Sign in to start your session</p>
+    
+        <form [formGroup]="loginForm">
+            <div [hidden]="!successMsg" class="alert alert-success">{{success}}</div>
+            <div [hidden]="!errorMsg" class="alert alert-danger">{{error}}</div>
+            <div class="form-group has-feedback">
+                <input type="email" formControlName="email" id="email" required [ngClass]="(email.invalid && (email.dirty || email.touched)) ? 'form-control is-invalid' : (email.valid)? 'form-control is-valid':'form-control'" placeholder="Email" />
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                <div *ngIf="email.invalid && (email.dirty || email.touched)" class="invalid-feedback">
+                    <div *ngIf="email.errors.required">Email is required.</div>
+                    <div *ngIf="email.errors.email">Email is invalid.</div>
+                </div>
+            </div>
+            <div class="form-group has-feedback">
+                <input type="password" formControlName="password" id="password" required [ngClass]="(password.invalid && (password.dirty || password.touched)) ? 'form-control is-invalid' : (password.valid)? 'form-control is-valid':'form-control'" placeholder="Password" />
+                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                <div *ngIf="password.invalid && (password.dirty || password.touched)" class="invalid-feedback">
+                    <div *ngIf="password.errors.required">Password is required.</div>
+                    <div *ngIf="password.errors.minlength">Password must be a minimum of 6 characters.</div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- /.col -->
+                <div class="col-xs-12">
+                <button type="submit" [disabled]="!loginForm.valid || loginForm.pending || processing" (click)="onSubmit()" class="btn btn-primary btn-block btn-flat">{{buttonText}}</button>
+                </div>
+                <!-- /.col -->
+            </div>
+        </form>
+        <!-- /.social-auth-links -->
+    
+        <a href="#">I forgot my password</a><br>
+    
+      </div>
+      <!-- /.login-box-body -->
+    </div>
+    <!-- /.login-box -->
+</body>

@@ -24,9 +24,19 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/AdminLTE.min.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/font-awesome.min.css",
+              "src/assets/css/iCheck.css",
+              "src/assets/css/ionicons.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery.min.js",
+              "src/assets/js/bootstrap.min.js",
+              "src/assets/js/icheck.min.js",
+              "src/assets/js/custom.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -119,6 +129,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "instaDoorAdmin"
+    }
+  },
+  "defaultProject": "instaDoorAdmin",
+  "cli": {
+    "analytics": "475023e6-c498-4e45-8692-b59b5c77cbf7"
+  }
 }
