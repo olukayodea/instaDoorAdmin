@@ -57,6 +57,47 @@ export class ApiService {
   }
 
   /**
+   * API to request password
+   */
+  requestPassword(email:string) {
+    // request headers
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    }
+    const responseData = this.get(this.baseUrl + 'users/recovery/' + email, httpOptions);
+
+    return responseData;
+  }
+
+  /**
+   * API to reset password
+   */
+  resetPassword(userData) {
+    var resetToken = localStorage.getItem("resetToken");
+    
+    // request headers
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    }
+
+    var otp = userData.otp;
+    var password = userData.password;
+
+    const data = {
+      otp,
+      password,
+      resetToken
+    }
+    const responseData = this.put(this.baseUrl + 'users/passwordReset', JSON.stringify(data), httpOptions);
+
+    return responseData;
+  }
+
+  /**
    * POST Request
    * @param url API URL
    * @param jsonData JSON encoded Data
