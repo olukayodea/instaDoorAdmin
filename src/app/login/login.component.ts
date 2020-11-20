@@ -94,11 +94,7 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('userData', JSON.stringify(user.data));
 
           this.redirect = localStorage.getItem('route');
-          if (remember === true) {
-            var extension = Math.floor(60*60*24*365)
-          } else {
-            var extension = Math.floor(60*30)
-          }
+          var extension = Math.floor(60*10)
           var currentTimeInSeconds = Math.floor((Date.now() / 1000) + extension);
           localStorage.setItem('remember', currentTimeInSeconds.toString());
           this.router.navigate(['/'+this.redirect]);

@@ -26,15 +26,25 @@
             "styles": [
               "src/styles.css",
               "src/assets/css/AdminLTE.min.css",
+              "src/assets/css/jquery-jvectormap.css",
               "src/assets/css/bootstrap.min.css",
               "src/assets/css/font-awesome.min.css",
               "src/assets/css/iCheck.css",
-              "src/assets/css/ionicons.min.css"
+              "src/assets/css/ionicons.min.css",
+              "src/assets/css/all-skins.min.css"
             ],
             "scripts": [
               "src/assets/js/jquery.min.js",
               "src/assets/js/bootstrap.min.js",
               "src/assets/js/icheck.min.js",
+              "src/assets/js/fastclick.js",
+              "src/assets/js/adminlte.min.js",
+              "src/assets/js/jquery.sparkline.min.js",
+              "src/assets/js/jquery-jvectormap-1.2.2.min.js",
+              "src/assets/js/jquery-jvectormap-world-mill-en.js",
+              "src/assets/js/jquery.slimscroll.min.js",
+              "src/assets/js/Chart.js",
+              "src/assets/js/demo.js",
               "src/assets/js/custom.js"
             ]
           },

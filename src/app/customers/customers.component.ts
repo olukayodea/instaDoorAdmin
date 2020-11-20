@@ -5,12 +5,13 @@ import { ApiService } from '../_services/api.service';
 import { ChecksService } from '../_services/checks.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-customers',
+  templateUrl: './customers.component.html',
+  styleUrls: ['./customers.component.css']
 })
-export class HomeComponent implements OnInit {
-  page: string = "home";
+export class CustomersComponent implements OnInit {
+
+  page: string = "customers";
   userData: UserData;
   rolesData: RoleCOntrol;
   

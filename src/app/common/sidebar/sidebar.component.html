@@ -1,0 +1,102 @@
+
+<!-- Left side column. contains the logo and sidebar -->
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- Sidebar user panel -->
+        <div class="user-panel">
+        <div class="pull-left image">
+            <img src="{{userData.url.profilePicture}}" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+            <p>{{userData.firstName}} {{userData.lastName}}</p>
+            <span><i class="fa fa-circle text-success"></i> Online</span>
+        </div>
+        </div>
+        <!-- search form -->
+        <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+            <input type="text" name="q" class="form-control" placeholder="Search...">
+            <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                    <i class="fa fa-search"></i>
+                </button>
+                </span>
+        </div>
+        </form>
+        <!-- /.search form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu" data-widget="tree">
+            <li class="header">MAIN NAVIGATION</li>
+            <li [ngClass]="page == 'home' ? 'active menu-open' :''">
+                <a href="./">
+                    <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                </a>
+            </li>
+            <li [ngClass]="page == 'stores' ? 'active treeview menu-open' :'treeview'">
+                <a href="#">
+                    <i class="fa fa-shopping-basket"></i>
+                    <span>Stores</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="stores/approve"><i class="fa fa-minus-square-o "></i> <span class="label label-primary pull-right">4</span> Approve Stores</a></li>
+                    <li><a href="stores/add"><i class="fa fa-minus-square-o "></i> Create Store</a></li>
+                    <li><a href="stores"><i class="fa fa-minus-square-o "></i> Manage Stores</a></li>
+                </ul>
+            </li>
+            <li [ngClass]="page == 'courier' ? 'active treeview menu-open' :'treeview'">
+                <a href="#">
+                    <i class="fa fa-car"></i>
+                    <span>Courier</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="courier"><i class="fa fa-minus-square-o "></i> <span class="label label-primary pull-right">4</span> Manage Couriers</a></li>
+                    <li><a href="courier/approve"><i class="fa fa-minus-square-o "></i> <span class="label label-danger pull-right">4</span> Approe Courier</a></li>
+                </ul>
+            </li>
+            <li [ngClass]="page == 'customers' ? 'active menu-open' :''">
+                <a href="customers"><i class="fa fa-users"></i> <span>Customers</span></a>
+            </li>
+            <li [ngClass]="page == 'orders' ? 'active menu-open' :''">
+                <a href="orders"><i class="fa fa-file-text"></i> <span>Orders</span></a>
+            </li>
+            <li [ngClass]="page == 'wallet' ? 'active menu-open' :''">
+                <a href="wallet"><i class="fa fa-credit-card-alt"></i> <span>Wallet</span></a>
+            </li>
+            <li [ngClass]="page == 'payout' ? 'active treeview menu-open' :'treeview'">
+                <a href="#">
+                    <i class="fa fa-money"></i>
+                        <span>Payouts</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="payout/request"><i class="fa fa-minus-square-o "></i> <span class="label label-primary pull-right">4</span>
+                            Payment Request</a></li>
+                        <li><a href="payout/advise"><i class="fa fa-minus-square-o "></i> Payment Advice</a></li>
+                    </ul>
+            </li>
+            <li [ngClass]="page == 'users' ? 'active treeview menu-open' :'treeview'">
+                <a href="#">
+                <i class="fa fa-user"></i>
+                    <span>Users</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="users/add"><i class="fa fa-minus-square-o "></i> Add New Admin</a></li>
+                    <li><a href="users"><i class="fa fa-minus-square-o "></i> <span class="label label-primary pull-right">4</span> Manage Admins</a></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>

@@ -78,12 +78,48 @@ export class ErrorCodes {
 }
 
 export class RoleCOntrol {
-  store: true | false;
-  inventory: true | false;
+  customer: true | false;
+  store: _Store;
+  courier: _Courier;
   orders: true | false;
-  wallet: true | false;
-  users: true | false;
-  payment: true | false;
+  admin: true | false;
+  wallet: _Wallet;
+  inventory: true | false;
+  payouts: _Payouts;
+
+  constructor() {
+    this.customer = false;
+    this.store = new _Store();
+    this.courier = new _Courier();
+    this.orders = false;
+    this.admin = false;
+    this.wallet = new _Wallet();
+    this.inventory = false;
+    this.payouts = new _Payouts();
+  }
+}
+
+export class _Store {
+  manageAdmin: true | false = false;
+  manageStore: true | false = false;
+  approveStoreAdmin: true | false = false;
+  approveStore: true | false = false;
+}
+
+export class _Courier {
+  manage: true | false = false;
+  approve: true | false = false;
+}
+
+export class _Wallet {
+  manageCustomer: true | false = false;
+  manageStore: true | false = false;
+  manageCourier: true | false = false;
+}
+
+export class _Payouts {
+  manageRequest: true | false = false;
+  approveRequest: true | false = false;
 }
 
 export class Counts {
